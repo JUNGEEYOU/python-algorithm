@@ -89,14 +89,34 @@
 * [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062) (카카오): ([Python 3.7 코드](/12/8.py))
 
 #### 13장 DFS/BFS
- 
+* [특정 거리의 도시 찾기](https://www.acmicpc.net/problem/18352) (핵심 유형): ([Python 3.7 코드](/13/1.py))
+* [연구소](https://www.acmicpc.net/problem/14502) (삼성): ([Python 3.7 코드](/13/2.py) )
+* [경쟁적 전염](https://www.acmicpc.net/problem/18405) (핵심 유형): ([Python 3.7 코드](/13/3.py))
+* [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058) (카카오): ([Python 3.7 코드](/13/4.py) )
+* [연산자 끼워 넣기](https://www.acmicpc.net/problem/14888) (삼성): ([Python 3.7 코드](/13/5.py) )
+* [감시 피하기](https://www.acmicpc.net/problem/18428) (핵심 유형): ([Python 3.7 코드](/13/6.py))
+* [인구 이동](https://www.acmicpc.net/problem/16234) (삼성): ([Python 3.7 코드](/13/7.py))
+* [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063) (카카오): ([Python 3.7 코드](/13/8.py))
 
 #### 14장 정렬
-
+* [국영수](https://www.acmicpc.net/problem/10825) (핵심 유형): ([Python 3.7 코드](/14/1.py))
+* [안테나](https://www.acmicpc.net/problem/18310) (국내 S 교육 기관 선발 평가): ([Python 3.7 코드](/14/2.py) )
+* [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889) (카카오): ([Python 3.7 코드](/14/3.py))
+* [카드 정렬하기](https://www.acmicpc.net/problem/1715) (핵심 유형): ([Python 3.7 코드](/14/4.py))
 
 
 #### 15장 이진 탐색
-
+* 이론
+    * 재귀 함수를 이용한 이진 탐색: ([Python 3.7 코드](/7/2.py))
+    * 반복문을 이용한 이진 탐색: ([Python 3.7 코드](/7/3.py) )
+    * 이진탐색 모듈 사용 - 이진탐색 : [Python 3.7 코드](/7/4.py)
+    * 이진탐색 모듈 사용 - 수 범위  : [Python 3.7 코드](/7/5.py)
+* 실전
+    * 부품 찾기
+        * 이진 탐색으로 해결: ([Python 3.7 코드](/7/5.py) / [C++ 코드](/7/5.cpp) / [Java 코드](/7/5.java))
+        * 계수 정렬로 해결: ([Python 3.7 코드](/7/6.py) / [C++ 코드](/7/6.cpp) / [Java 코드](/7/6.java))
+        * 집합(Set) 자료형으로 해결: ([Python 3.7 코드](/7/7.py) / [C++ 코드](/7/7.cpp) / [Java 코드](/7/7.java))
+    * 떡볶이 떡 만들기: ([Python 3.7 코드](/7/8.py) / [C++ 코드](/7/8.cpp) / [Java 코드](/7/8.java))
 
 #### 16장 다이나믹 프로그래밍
 
