@@ -8,13 +8,16 @@
 """
 import sys
 
-result = 0
-n, k = map(int, sys.stdin.readline().split())
 
-while n != 1:
+n, k = map(int, sys.stdin.readline().split())
+result = 0
+
+while 1:
+    if n == 1:
+        break
     if n % k == 0:
-        n = (n // k)
+        n = n // k
     else:
-        n -= 1
+        n = n - 1
     result += 1
 print(result)

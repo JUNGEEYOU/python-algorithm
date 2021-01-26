@@ -12,22 +12,17 @@
 """
 import sys
 
-dx = [0, 0, -1, 1]
-dy = [-1, 1, 0, 0]
-types = ['L', 'R', 'U', 'D']
 n = int(sys.stdin.readline().split()[0])
-a_list = list(map(str, sys.stdin.readline().split()))
-x, y = 1, 1
+array = list(map(str, sys.stdin.readline().split()))
+result = (1, 1)
+move = {'L': (0, -1), 'R': (0, 1), 'U': (-1, 0), 'D': (1, 0)}
 
-for a in a_list:
-    for t in range(4):
-        if a == types[t]:
-            nx = x + dx[t]
-            ny = y + dy[t]
-    if nx < 1 or ny < 1 or nx > n or ny > n:
+for a in array:
+    x = result[0] + move[a][0]
+    y = result[1] + move[a][1]
+
+    if x < 1 or y < 1 or x > n or y > n:
         continue
-    else:
-        x, y = nx, ny
-print(x, y)
+    result = (x, y)
 
-
+print(result[0], result[1])

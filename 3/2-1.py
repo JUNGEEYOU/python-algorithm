@@ -1,5 +1,5 @@
 """
- 큰 수의 법칙 - 방법 2. 횟수로 계산하기
+ 큰 수의 법칙
  N개의 자연수 리스트, M 개의 수를 선택, K 만큼 연속 가능.
  가장 큰 수를 리턴한다.
 
@@ -9,18 +9,18 @@
 """
 import sys
 
-N, M, K = map(int, sys.stdin.readline().split())
-number = list(map(int, sys.stdin.readline().split()))
-number.sort(reverse=True)
-first = number[0]
-second = number[1]
-answer = 0
 
-# 가장 큰 수가 더해지는 횟수 계산
-count = M // (K + 1) * K      # 나눠 떨어지는 경우. 가장 큰수가 등장하는 횟수
-count += M % (K + 1)          # 나눠 떨어지지 않는 경우. 나머지는 모두 큰수 횟수로 추가
+n, m, k = map(int, sys.stdin.readline().split())
+array = list(map(int, sys.stdin.readline().split()))
 
-answer += (count * first)
-answer += (M - count) * second
+array.sort(reverse=True)
 
-print(answer)
+temp = (array[0] * k) + array[1]
+
+a = m // (k + 1)   # 해당 만큼은 묶음으로 반복
+b = m % (k + 1)    # 나머지는 가장 큰 수로 채움
+
+print(temp*a + array[0]*b)
+
+
+
