@@ -13,7 +13,7 @@ graph = [
     ]
 
 visited = [[False] * m for _ in range(n)]   # 방문 유무
-count = 0
+count = 0   # 섬의 수
 
 for i in range(n):
     for j in range(m):
