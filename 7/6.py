@@ -5,16 +5,16 @@
 """
 import sys
 
-n, m = map(int, sys.stdin.readline().split())
-array = list(map(int, sys.stdin.readline().split()))
+n, m = map(int, sys.stdin.readline().split())          # n: 떡의 개수, m: 요청한 떡의 길이 ex) 4, 6
+array = list(map(int, sys.stdin.readline().split()))   # 떡의 개별 높이 리스트  ex) 19 15 10 17
 
 left = 0
-right = max(array)
+right = max(array)   # 19
 
-result = 0 # 최종 절단기 길이
+result = 0     # 최종 절단기 길이
 while left <= right:
-    mid = (left + right) // 2  # 절단기의 길이
-    total = 0        # 손님이 얻을 수 있는 떡 길이
+    mid = (left + right) // 2    # 절단기의 길이 임의 설정
+    total = 0                    # 손님이 얻을 수 있는 떡 길이
     for a in array:
         if a > mid:
             total += a - mid

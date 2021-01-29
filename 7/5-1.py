@@ -10,6 +10,7 @@ import sys
 array = [0] * 1000001
 
 n = int(sys.stdin.readline().split()[0])
+# 가게에 있는 경우 1로 설정
 for i in sys.stdin.readline().split():
     array[int(i)] = 1
 
@@ -17,7 +18,7 @@ m = int(sys.stdin.readline().split()[0])
 target_list = list(map(int, sys.stdin.readline().split()))
 
 for i in target_list:
-    if array[i]:
+    if array[i]:   # 1인 경우는 가게에 있는 상태
         print("yes", end=" ")
     else:
         print("no", end=" ")
