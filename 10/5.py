@@ -10,6 +10,7 @@
 4 7
 5 6
 6 4
+
 1 2 5 3 6 4 7
 """
 from collections import deque
@@ -29,15 +30,17 @@ for _ in range(e):
 def topology_sort():
     result = []
     q = deque()
-
+    # 1. 진입차수가 0인 모든 노드를 큐에 넣는다.
     for i in range(1, v + 1):
-        if indegree[i] == 0:  # 처음은 진입차수가 0인 것부터. 진입차수 0이 시작하는 노드이기 때문
+        if indegree[i] == 0:
             q.append(i)
     while q:
         now = q.popleft()
         result.append(now)
-        for i in graph[now]:   # 인접 노드 진입 차수 -1 & 0이면 큐에 넣기
+        for i in graph[now]:
+            # 2. 큐에서 원소를 꺼내 해당 노드에서 나가는 간선을 그래프에서 제거
             indegree[i] -= 1
+            # 3. 새롭게 진입차수가 0이된 노드를 큐에 넣기
             if indegree[i] == 0:
                 q.append(i)
 
