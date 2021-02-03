@@ -9,24 +9,22 @@
  02984
 """
 import sys
-data = str(sys.stdin.readline().split()[0])
-count0 = 0    # 전부 0으로 바꾸는 경우
-count1 = 0    # 전부 1로 바꾸는 경우
 
-# 첫 번째 원소에 대해서 처리
-if data[0] == '1':
-    count0 += 1
+s = str(sys.stdin.readline().split()[0])
+
+count_0 = 0   # 0으로 바꿔야하는 경우
+count_1 = 0   # 1로 바꿔야하는 경우
+
+if s[0] == "0":
+    count_1 += 1
 else:
-    count1 += 1
+    count_0 += 1
 
-# 두 번째 원소부터 모든 원소를 확인하며
-for i in range(len(data) - 1):
-    if data[i] != data[i + 1]:
-        # 다음 수에서 1로 바뀌는 경우
-        if data[i + 1] == '1':
-            count0 += 1
-        # 다음 수에서 0으로 바뀌는 경우
+for i in range(len(s) - 1):
+    if s[i] != s[i + 1]:  # 옆 문자와 다른 경우, 바뀌는 횟수 증가
+        if s[i + 1] == "0":
+            count_1 += 1
         else:
-            count1 += 1
+            count_0 += 1
 
-print(min(count0, count1))
+print(min(count_1, count_0))

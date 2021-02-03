@@ -9,7 +9,12 @@
 import sys
 n = int(sys.stdin.readline()[0])
 coins = list(map(int, sys.stdin.readline().split()))
-coins.sort(reverse=False)
-result = 0
+coins.sort()
+
+target = 1    # 1부터 target -1까지 가능
 for c in coins:
-    pass
+    if target < c:  # target 못만드는 경우
+        break
+    target += c
+
+print(target)

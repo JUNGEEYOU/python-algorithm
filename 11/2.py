@@ -9,17 +9,14 @@
  02984
 """
 import sys
-s = str(sys.stdin.readline().split()[0])
-if len(s) == 1:
-    print(s)
-else:
-    result = int(s[0])
-    for i in range(1, len(s)):
-        num = int(s[i])
-        if num <= 1 or result <= 1:     # 앞 문자열이나 현재 문자열이 0 이거나 1이면 합하기
-            result = result + int(s[i])
-        else:
-            result = result * int(s[i])
+s = str(sys.stdin.readline().split()[0])   # 숫자로된 문자열
 
-    print(result)
+total = int(s[0])
+for i in range(1, len(s)):
+    if total == 0 or s[i] == 0:          # 앞에 값이 0이면 +
+        total += int(s[i])
+    else:                   # 아닌 경우 *
+        total *= int(s[i])
+
+print(total)
 
