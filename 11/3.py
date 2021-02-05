@@ -12,19 +12,19 @@ import sys
 
 s = str(sys.stdin.readline().split()[0])
 
-count_0 = 0   # 0으로 바꿔야하는 경우
-count_1 = 0   # 1로 바꿔야하는 경우
+zero = 0
+one = 0
 
 if s[0] == "0":
-    count_1 += 1
+    zero += 1
 else:
-    count_0 += 1
+    one += 1
 
-for i in range(len(s) - 1):
-    if s[i] != s[i + 1]:  # 옆 문자와 다른 경우, 바뀌는 횟수 증가
-        if s[i + 1] == "0":
-            count_1 += 1
+for i in range(1, len(s)):
+    if s[i] != s[i - 1]:  # 옆 문자와 다른 경우, 바뀌는 횟수 증가
+        if s[i] == "0":
+            zero += 1
         else:
-            count_0 += 1
+            one += 1
 
-print(min(count_1, count_0))
+print(min(zero, one))
