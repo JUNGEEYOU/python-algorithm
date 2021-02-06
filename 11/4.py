@@ -7,14 +7,18 @@
         양의 정수 금액 중 최솟값
 """
 import sys
-n = int(sys.stdin.readline()[0])
-coins = list(map(int, sys.stdin.readline().split()))
+
+n = int(sys.stdin.readline().split()[0])  # n개의 동전
+coins = list(map(int, sys.stdin.readline().split()))  # 동전들
+
 coins.sort()
 
-target = 1    # 1부터 target -1까지 가능
-for c in coins:
-    if target < c:  # target 못만드는 경우
-        break
-    target += c
+okay = 0  # 현재까지 가능한 수
 
-print(target)
+for c in coins:
+    if c <= okay + 1:  # 현재까지 가능한 수 + 1 보다 크거나 같은 경우, 동전을 만들 수 있음
+        okay += c
+    else:  # 현재까지 가능한 수 + 1 보다 작은 경우는 못만드는 경우
+        break
+
+print(okay + 1)
