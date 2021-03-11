@@ -7,22 +7,23 @@
 20
 40
 """
-import sys
+
 import heapq
+import sys
 
-n = int(sys.stdin.readline().split()[0])
-array = list()
+n = int(sys.stdin.readline().split()[0])    # 카드 묶음
+arr = []
+
+for i in range(n):
+    heapq.heappush(arr, int(sys.stdin.readline().split()[0]))
+
 result = 0
-
-for _ in range(n):
-    heapq.heappush(array, int(sys.stdin.readline().split()[0]))
-
-while len(array) > 1:
-    first = heapq.heappop(array)
-    second = heapq.heappop(array)
+while len(arr) > 1:
+    first = heapq.heappop(arr)
+    second = heapq.heappop(arr)
     sum_val = first + second
     result += sum_val
-    heapq.heappush(array, sum_val)
+    heapq.heappush(arr, sum_val)
 
 print(result)
 

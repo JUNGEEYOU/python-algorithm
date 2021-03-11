@@ -5,10 +5,9 @@
 """
 import sys
 
-n = int(sys.stdin.readline().split()[0])
-arr = list(map(int, sys.stdin.readline().split()))
+n = int(sys.stdin.readline().split()[0])    # 집의 수
+loc = list(map(int, sys.stdin.readline().split()))   # 각 위치
 
-arr.sort()
+loc.sort()
 
-print(arr[(n-1)//2])
-
+print(loc[(n - 1)//2])    # 중간 인덱스를 안테나로 잡기
